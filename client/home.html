@@ -1,0 +1,59 @@
+<body>
+
+<!-- add bootstrap for style-->
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M" crossorigin="anonymous">
+    
+<script type="text/javascript">
+    //create global images varible to have access thouout the application
+    var images ={"image1":"","image2":"","image3":"","image4":"","image5":""};
+</script>
+<!-- gitshot js from yahoo gifshot repo -->
+<script src='js/gifshot.js'></script>
+    
+<!-- Add customized js -->
+<script src='js/index.js'></script>
+    
+    <!-- Add customized js -->
+<script src='js/sample.js'></script>
+    
+<div class="container">
+    <header>
+        <h1>Gif Maker Test</h1>
+    </header>
+    <div>
+        <table id="selectImageTable">
+            <tr>
+                <td>
+                    <div>
+                        <div id="dropDiv">
+                            <span id="dropText">Drag and <em>Drop</em> here</span>
+                            <ul id="imgList"></ul>
+                        </div>
+                    </div>
+                </td>
+                <td>
+                    <div id="image1">1.&nbsp;{{> gifmaker }}</div><br/>
+                    <div id="image2">2.&nbsp;{{> gifmaker }}</div><br/>
+                    <div id="image3">3.&nbsp;{{> gifmaker }}</div><br/>
+                    <div id="image4">4.&nbsp;{{> gifmaker }}</div><br/>
+                    <div id="image5">5.&nbsp;{{> gifmaker }}</div><br/>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2"><input id="milliSeconds" type="number" placeholder="milliseconds" /></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="resetButton">Reset</button></td>
+            </tr>
+            <tr>
+                <td colspan="2"><button id="submitButton">Submit</button></td>
+            </tr>
+        </table>
+    </div>
+</div>
+</body>
+
+<!--image template -->
+<template name="gifmaker">
+    <input type=file accept="image/*" />
+</template>
