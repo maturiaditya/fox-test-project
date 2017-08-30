@@ -91,7 +91,7 @@ $( document ).ready(function() {
                     document.body.appendChild(animatedImage);
                     document.body.appendChild(breakpoint);
                     document.body.appendChild(downloadLink);
-                    
+                    document.body.appendChild(breakpoint);
                     $("#resetButton").click();
                     
                 }
