@@ -60,6 +60,9 @@ $( document ).ready(function() {
             //clear all input fields
             document.getElementById(key).getElementsByTagName("input")[0].value="";
         }
+        
+        //remove created gif image if created
+        $("#gifCreatedHere").html("");
     });
     
     $("#submitButton").bind("click",function(e){
@@ -86,14 +89,12 @@ $( document ).ready(function() {
                     downloadLink.href= image;
                     downloadLink.download="file.gif";
                     downloadLink.innerHTML="download";
-                    document.body.appendChild(breakpoint);
-                    document.body.appendChild(breakpoint);
-                    document.body.appendChild(animatedImage);
-                    document.body.appendChild(breakpoint);
-                    document.body.appendChild(downloadLink);
-                    document.body.appendChild(breakpoint);
+                    var htmlString = breakpoint+breakpoint+animatedImage+breakpoint+downloadLink+breakpoint;
+                    $("#gifCreatedHere").append(animatedImage);
+                    $("#gifCreatedHere").append(breakpoint);
+                    $("#gifCreatedHere").append(breakpoint);
+                    $("#gifCreatedHere").append(downloadLink);
                     $("#resetButton").click();
-                    
                 }
             });
         }

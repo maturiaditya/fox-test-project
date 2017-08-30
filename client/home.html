@@ -1,3 +1,6 @@
+<head>
+    <title>Gif Maker Test</title>
+</head>
 <body>
 
 <!-- add bootstrap for style-->
@@ -36,15 +39,17 @@
                     <div id="image4">4.&nbsp;{{> gifmaker }}</div><br/>
                     <div id="image5">5.&nbsp;{{> gifmaker }}</div><br/>
                 </td>
+                <td id="gifCreatedHere">
+                </td>
             </tr>
             <tr>
-                <td colspan="2"><input id="milliSeconds" type="number" placeholder="milliseconds" /></td>
+                <td colspan="3"><input id="milliSeconds" type="number" placeholder="milliseconds" /></td>
             </tr>
             <tr>
-                <td colspan="2"><button id="resetButton">Reset</button></td>
+                <td colspan="3"><button id="resetButton">Reset</button></td>
             </tr>
             <tr>
-                <td colspan="2"><button id="submitButton">Submit</button></td>
+                <td colspan="3"><button id="submitButton">Submit</button></td>
             </tr>
         </table>
     </div>

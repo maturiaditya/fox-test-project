@@ -1,6 +1,9 @@
-div.container{
-    text-align: -webkit-center;
+body{
     text-align: center;
+}
+div.container{
+    text-align: center;
+    text-align: -webkit-center;
     padding-top: 2%;
 }
 
